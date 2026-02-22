@@ -1,0 +1,90 @@
+body {
+    background-color: #001f3f;
+    color: white;
+}
+
+.hero {
+    background-image: url('img/background.jpg');   /* sua foto de filé */
+    background-size: cover;                        /* cobre toda a faixa */
+    background-position: center;                   /* centraliza a imagem */
+    background-repeat: no-repeat;
+    min-height: 30vh;                              /* mantém a altura que você gostou */
+    display: flex;
+    align-items: center;
+    position: relative;                            /* pra overlay funcionar */
+}
+
+/* Overlay escuro pra texto branco destacar (ajusta a opacidade se quiser) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);          /* preto com 40% de opacidade */
+    z-index: 1;
+}
+
+/* Texto e botão por cima do overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+section.py-5.bg-light {
+    background-image: url('img/produto-background.png');  /* nome exato da sua imagem */
+    background-size: cover;           /* cobre toda a seção */
+    background-position: center center;  /* centraliza perfeitamente (horizontal e vertical) */
+    background-repeat: no-repeat;
+    background-attachment: fixed;     /* opcional: faz a imagem ficar parada ao rolar a página (fica mais premium) */
+    position: relative;
+    padding-top: 80px;                /* dá mais espaço em cima */
+    padding-bottom: 80px;             /* dá mais espaço embaixo */
+}
+
+/* Overlay branco bem leve pra imagem aparecer, mas o texto continuar legível */
+section.py-5.bg-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.35);  /* 35% de branco - ajusta pra 0.25 se quiser mais imagem visível */
+    z-index: 1;
+}
+
+/* Card do produto por cima do overlay */
+section.py-5.bg-light .card {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95);  /* card quase branco pra destacar bem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);     /* sombra suave pra dar profundidade */
+}
+
+/* Fundo da seção "Nosso Produto" com imagem da cozinha beira-mar */
+section.py-5.bg-light {
+    background-image: url('img/produto-background.png');  /* nome exato da sua imagem da cozinha */
+    background-size: cover;                /* cobre toda a seção */
+    background-position: center center;    /* centraliza horizontal e vertical */
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 120px;                    /* mais espaço em cima */
+    padding-bottom: 120px;                 /* mais espaço embaixo */
+}
+
+/* Overlay branco SUPER leve pra imagem aparecer forte, mas texto legível */
+section.py-5.bg-light::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);  /* só 20% de branco - imagem aparece quase pura */
+    z-index: 1;
+}
+
+/* Card do produto por cima, com fundo branco sólido pra destacar perfeitamente */
+section.py-5.bg-light .card {
+    position: relative;
+    z-index: 2;
+    background-color: white;               /* branco total no card */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* sombra pra dar profundidade e "flutuar" */
+    border-radius: 15px;                   /* cantos arredondados pro losango ficar mais moderno */
+}
