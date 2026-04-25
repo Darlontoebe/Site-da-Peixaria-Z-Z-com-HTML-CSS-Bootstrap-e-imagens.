@@ -22,6 +22,5 @@ O projeto utiliza **HTML5, CSS3 e Bootstrap 5** para criar uma página moderna, 
 ---
 
 Clone o repositório
-git clone (https://github.com/Darlontoebe/Site-da-Peixaria-Z-Z-com-HTML-CSS-Bootstrap-e-imagens.)
-
+https://darlontoebe.github.io/Site-da-Peixaria-Z-Z-com-HTML-CSS-Bootstrap-e-imagens./
 
